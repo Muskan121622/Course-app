@@ -6,4 +6,4 @@ userRoute.post("/signup",signup);
 userRoute.post("/login",login);
 userRoute.get("/logout",logout);
 userRoute.get("/purchases",userMiddleware,purchases);
-export default  userRoute;
+export default  userRoute;

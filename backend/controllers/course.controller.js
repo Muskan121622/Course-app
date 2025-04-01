@@ -125,6 +125,11 @@ export const buyCourses = async (req, res) => {
         .json({ errors: "User has already purchased this course" });
     }
 
+    // const newPurchase=new Purchase({userId,courseId})
+    // await newPurchase.save();
+      //res.status(201).json({message:"course  purchased  successfully",newPurchase})
+
+
     // stripe payment code goes here!!
     const amount = course.price;
     const paymentIntent = await stripe.paymentIntents.create({

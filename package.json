@@ -4,6 +4,7 @@
     "@stripe/stripe-js": "^5.7.0",
     "axios": "^1.8.1",
     "cors": "^2.8.5",
+    "nodemon": "^3.1.9",
     "react-hot-toast": "^2.5.2",
     "stripe": "^17.7.0"
   }

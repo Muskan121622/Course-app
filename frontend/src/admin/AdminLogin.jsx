@@ -180,7 +180,7 @@ function AdminLogin() {
 
     try {
       const response = await axios.post(
-        `https://course-app-2-mrpv.onrender.com/admin/login`,
+        `https://course-app-2-mrpv.onrender.com/api/v1/admin/login`,
         { email, password },
         {
           withCredentials: true,

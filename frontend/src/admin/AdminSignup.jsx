@@ -206,7 +206,7 @@ function AdminSignup() {
 
     try {
       const response = await axios.post(
-        `https://course-app-2-mrpv.onrender.com/admin/signup`,
+        `https://course-app-2-mrpv.onrender.com/api/v1/admin/signup`,
         { firstName, lastName, email, password },
         {
           withCredentials: true,

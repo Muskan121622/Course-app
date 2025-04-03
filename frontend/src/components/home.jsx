@@ -20,7 +20,7 @@ function Home() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get("https://course-app-2-mrpv.onrender.com/course/courses", {
+        const response = await axios.get("https://course-app-2-mrpv.onrender.com/api/v1/course/courses", {
           withCredentials: true,
         });
         console.log("Fetched Courses:", response.data.courses);
@@ -34,7 +34,7 @@ function Home() {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.get("https://course-app-2-mrpv.onrender.com/user/logout", {
+      const response = await axios.get("https://course-app-2-mrpv.onrender.com/api/v1/user/logout", {
         withCredentials: true,
       });
       toast.success(response.data.message);

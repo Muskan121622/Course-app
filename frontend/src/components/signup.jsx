@@ -391,7 +391,7 @@ function Signup() {
 
     try {
       const response = await axios.post(
-        `https://course-app-2-mrpv.onrender.com/user/signup`,
+        `https://course-app-2-mrpv.onrender.com/api/v1/user/signup`,
         { firstName, lastName, email, password },
         {
           withCredentials: true,

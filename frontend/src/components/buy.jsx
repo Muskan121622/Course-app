@@ -28,7 +28,7 @@ function Buy() {
     const fetchBuyCourseData = async () => {
       try {
         const response = await axios.post(
-          `https://course-app-2-mrpv.onrender.com/course/buy/${courseId}`,
+          `https://course-app-2-mrpv.onrender.com/api/v1/course/buy/${courseId}`,
           {},
           {
             headers: {
@@ -113,7 +113,7 @@ function Buy() {
       };
 
       try {
-        await axios.post(`https://course-app-2-mrpv.onrender.com/order`, paymentInfo, {
+        await axios.post(`https://course-app-2-mrpv.onrender.com/api/v1/order`, paymentInfo, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

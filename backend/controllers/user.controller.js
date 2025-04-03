@@ -78,19 +78,24 @@ return res.status(403).json({error:"invalid credentials"})
         
     }
 };
-export const logout=async(req,res)=>{
-     try{  if(!req.cookies.jwt){
-        return res.status(401).json({error:"kindly login first"})
-     }
-    
-     res.clearCookie("jwt");
-     res.status(200).json({message:"logged  out successfully"});
-    } catch(error){
-         res.status(500).json({error:"error in logged  out"});
-         console.log("error in  logout",error);
-     }
- 
- };
+export const logout = async (req, res) => {
+  try {
+    if (!req.cookies.jwt) {
+      return res.status(401).json({ error: "Kindly login first" });
+    }
+
+    res.clearCookie("jwt", {
+      httpOnly: true,
+      secure: true,
+      sameSite: "None", // Important for cross-origin requests
+    });
+
+    res.status(200).json({ message: "Logged out successfully" });
+  } catch (error) {
+    console.log("Error in logout", error);
+    res.status(500).json({ error: "Error in logging out" });
+  }
+};
 
  
  export const purchases = async (req, res) => {

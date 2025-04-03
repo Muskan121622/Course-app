@@ -27,7 +27,7 @@ function Courses() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get("http://localhost:1227/api/v1/course/courses", { withCredentials: true });
+        const response = await axios.get("https://course-app-2-mrpv.onrender.com/course/courses", { withCredentials: true });
         setCourses(response.data.courses || []);
       } catch (error) {
         console.error("Error fetching courses:", error);
@@ -40,7 +40,7 @@ function Courses() {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.get("http://localhost:1227/api/v1/user/logout", { withCredentials: true });
+      const response = await axios.get("https://course-app-2-mrpv.onrender.com/user/logout", { withCredentials: true });
       toast.success(response.data.message);
       localStorage.removeItem("user");
       setIsLoggedIn(false);

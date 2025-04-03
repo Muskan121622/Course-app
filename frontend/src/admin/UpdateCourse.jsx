@@ -63,7 +63,7 @@ function UpdateCourse() {
     }
     try {
       const response = await axios.put(
-        `http://localhost:1227/api/v1/course/update/${id}`,
+        `https://course-app-2-mrpv.onrender.com/course/update/${id}`,
         formData,
         {
           headers: {

@@ -206,7 +206,7 @@ function AdminSignup() {
 
     try {
       const response = await axios.post(
-        `https://course-app-3-17w5.onrender.com/api/v1/admin/signup`,
+        `https://course-app-4-hb1g.onrender.com/api/v1/admin/signup`,
         { firstName, lastName, email, password },
         {
           withCredentials: true,

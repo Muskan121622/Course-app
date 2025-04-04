@@ -7,7 +7,7 @@ import axios from "axios";
 function Dashboard() {
   const handleLogout = async () => {
     try {
-      const response = await axios.get(`https://course-app-3-17w5.onrender.com/api/v1/admin/logout`, {
+      const response = await axios.get(`https://course-app-4-hb1g.onrender.com/api/v1/admin/logout`, {
         withCredentials: true,
       });
       toast.success(response.data.message);

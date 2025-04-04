@@ -40,7 +40,7 @@ function Purchases() {
   useEffect(() => {
     const fetchPurchases = async () => {
       try {
-        const response = await axios.get(`https://course-app-3-17w5.onrender.com/api/v1/user/purchases`, {
+        const response = await axios.get(`https://course-app-4-hb1g.onrender.com/api/v1/user/purchases`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -57,7 +57,7 @@ function Purchases() {
   // Logout
   const handleLogout = async () => {
     try {
-      const response = await axios.get(`https://course-app-3-17w5.onrender.com/api/v1/user/logout`, {
+      const response = await axios.get(`https://course-app-4-hb1g.onrender.com/api/v1/user/logout`, {
         withCredentials: true,
       });
       toast.success(response.data.message);

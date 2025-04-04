@@ -21,7 +21,7 @@ function OurCourses() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get(`https://course-app-3-17w5.onrender.com/api/v1/course/courses`, {
+        const response = await axios.get(`https://course-app-4-hb1g.onrender.com/api/v1/course/courses`, {
           withCredentials: true,
         });
         console.log(response.data.courses);
@@ -38,7 +38,7 @@ function OurCourses() {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(
-        `https://course-app-3-17w5.onrender.com/api/v1/course/delete/${id}`,
+        `https://course-app-4-hb1g.onrender.com/api/v1/course/delete/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -39,7 +39,7 @@ function CourseCreate() {
 
     try {
       const response = await axios.post(
-        `https://course-app-2-mrpv.onrender.com/api/v1/course/create`,
+        `https://course-app-3-17w5.onrender.com/api/v1/course/create`,
         formData,
         {
           headers: {

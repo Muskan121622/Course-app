@@ -18,7 +18,7 @@ function UpdateCourse() {
   useEffect(() => {
     const fetchCourseData = async () => {
       try {
-        const { data } = await axios.get(`https://course-app-2-mrpv.onrender.com/api/v1/course/${id}`, {
+        const { data } = await axios.get(`https://course-app-3-17w5.onrender.com/api/v1/course/${id}`, {
           withCredentials: true,
         });
         console.log(data);
@@ -63,7 +63,7 @@ function UpdateCourse() {
     }
     try {
       const response = await axios.put(
-        `https://course-app-2-mrpv.onrender.com/api/v1/course/update/${id}`,
+        `https://course-app-3-17w5.onrender.com/api/v1/course/update/${id}`,
         formData,
         {
           headers: {

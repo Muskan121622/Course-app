@@ -611,7 +611,7 @@ function Home() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get("https://course-app-2-mrpv.onrender.com/api/v1/course/courses", {
+        const response = await axios.get("https://course-app-3-17w5.onrender.com/api/v1/course/courses", {
           withCredentials: true,
         });
         setCourses(response.data.courses);
@@ -637,7 +637,7 @@ function Home() {
   // Logout function
   const handleLogout = async () => {
     try {
-      const response = await axios.get("https://course-app-2-mrpv.onrender.com/api/v1/user/logout", {
+      const response = await axios.get("https://course-app-3-17w5.onrender.com/api/v1/user/logout", {
         withCredentials: true,
       });
       toast.success(response.data.message);

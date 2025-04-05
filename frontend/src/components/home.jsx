@@ -1788,7 +1788,7 @@ function Home() {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          "https://course-app-4-hb1g.onrender.com/api/api/v1/course/courses",
+          "https://course-app-4-hb1g.onrender.com/api/v1/course/courses",
           { withCredentials: true }
         );
         setCourses(response.data.courses);
@@ -1802,7 +1802,7 @@ function Home() {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        "https://course-app-4-hb1g.onrender.com/api/api/v1/user/logout",
+        "https://course-app-4-hb1g.onrender.com/api/v1/user/logout",
         { withCredentials: true }
       );
       toast.success(response.data.message);

@@ -14,6 +14,8 @@ import CourseCreate from "./admin/CourseCreate";
 import UpdateCourse from "./admin/UpdateCourse";
 import OurCourses from "./admin/OurCourses";
 import { Navigate } from 'react-router-dom';
+import  { useState, useEffect } from "react";
+
 function App() {
 
   // const user = JSON.parse(localStorage.getItem("user"));

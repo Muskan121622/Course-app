@@ -1777,7 +1777,7 @@ import toast from "react-hot-toast";
 
 function Home() {
   const [courses, setCourses] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const user = localStorage.getItem("user");

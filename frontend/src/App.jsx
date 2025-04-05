@@ -16,8 +16,26 @@ import OurCourses from "./admin/OurCourses";
 import { Navigate } from 'react-router-dom';
 function App() {
 
-  const user = JSON.parse(localStorage.getItem("user"));
-  const admin = JSON.parse(localStorage.getItem("admin"));
+  // const user = JSON.parse(localStorage.getItem("user"));
+  // const admin = JSON.parse(localStorage.getItem("admin"));
+
+  const [user, setUser] = useState(() => {
+    return JSON.parse(localStorage.getItem("user"));
+  });
+
+  const [admin, setAdmin] = useState(() => {
+    return JSON.parse(localStorage.getItem("admin"));
+  });
+
+  // This keeps user/admin in sync with localStorage after payment/login/logout
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUser(JSON.parse(localStorage.getItem("user")));
+      setAdmin(JSON.parse(localStorage.getItem("admin")));
+    }, 500); // check every 0.5s (or you can use `storage` event for multiple tabs)
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div>
       
